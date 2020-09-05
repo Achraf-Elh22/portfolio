@@ -72,6 +72,10 @@ nav {
   transform: translate(0%, 0%);
 }
 
+.hero a {
+  display: flex;
+}
+
 .details {
   grid-column: 2/3;
   align-self: end;
@@ -130,6 +134,16 @@ nav {
   100% {
     transform: scale(4);
   }
+}
+
+.chef,
+.hairstyles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .banner {
@@ -259,4 +273,47 @@ nav {
   .details h2 {
     font-size: 28px;
   }
+}
+
+.open-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: black;
+  height: 50vh;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+.open-nav .contact {
+  grid-column: 2/3;
+}
+
+.open-nav h3 {
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+
+.open-nav p {
+  font-size: 18px;
+}
+
+.open-nav .social-links img {
+  padding: 0 20px;
+}
+
+.logo,
+.menu {
+  z-index: 2;
+}
+
+.menu {
+  cursor: pointer;
 }
